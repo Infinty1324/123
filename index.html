@@ -11,77 +11,91 @@
   box-sizing: border-box;
   font-family: "Microsoft YaHei", sans-serif;
 }
+
+/* 适配你页面的浅绿背景 */
 body {
-  width: 260px;
-  background: #f0f9f4; /* 和你截图背景一致的浅绿底色 */
+  width: 420px; /* 和你聊天框宽度一致 */
+  background: linear-gradient(180deg, #f0fcf7 0%, #ffffff 100%);
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
 }
-.welcome-box {
-  width: 240px;
+
+.welcome-card {
+  width: 380px;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 100, 50, 0.08);
-  border: 1px solid rgba(200, 230, 210, 0.6);
-  padding: 20px 16px;
+  box-shadow: 0 2px 10px rgba(0, 100, 50, 0.06);
+  padding: 24px 20px;
   text-align: center;
 }
-/* 顶部欢迎标题 */
-.header-icon {
-  font-size: 48px;
-  margin-bottom: 12px;
+
+/* 顶部机器人图标 */
+.robot-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
 }
+
+/* 标题文字 */
 .title {
   font-size: 18px;
   font-weight: bold;
   color: #2e7d32;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
+
 .subtitle {
   font-size: 13px;
   color: #666;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 24px;
 }
-/* 功能卡片网格 */
+
+/* 功能按钮网格（2列布局，和你截图一致） */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
-.feature-card {
+
+.feature-btn {
   background: #f8fff9;
   border-radius: 10px;
-  padding: 14px 8px;
+  padding: 16px 12px;
   border: 1px solid #e0f2e9;
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.feature-card:hover {
+
+.feature-btn:hover {
   background: #e8f5e9;
   border-color: #a5d6a7;
   transform: translateY(-2px);
 }
+
 .feature-icon {
-  font-size: 24px;
-  margin-bottom: 6px;
+  font-size: 28px;
+  margin-bottom: 8px;
 }
+
 .feature-name {
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
 }
+
 /* 底部提示 */
 .footer-tip {
-  font-size: 11px;
+  font-size: 12px;
   color: #888;
+  padding-top: 12px;
+  border-top: 1px dashed #e0f2e9;
 }
 </style>
 </head>
 <body>
-<div class="welcome-box">
-  <div class="header-icon">🤖</div>
+<div class="welcome-card">
+  <div class="robot-icon">🤖</div>
   <div class="title">欢迎来到AI科普智能体</div>
   <div class="subtitle">
     在这里探索人工智能的世界<br>
@@ -89,25 +103,25 @@ body {
   </div>
 
   <div class="feature-grid">
-    <div class="feature-card">
+    <div class="feature-btn">
       <div class="feature-icon">🎯</div>
       <div class="feature-name">趣味问答</div>
     </div>
-    <div class="feature-card">
+    <div class="feature-btn">
       <div class="feature-icon">📚</div>
       <div class="feature-name">错题记忆</div>
     </div>
-    <div class="feature-card">
+    <div class="feature-btn">
       <div class="feature-icon">🧠</div>
       <div class="feature-name">知识点学习</div>
     </div>
-    <div class="feature-card">
+    <div class="feature-btn">
       <div class="feature-icon">💬</div>
       <div class="feature-name">智能答疑</div>
     </div>
   </div>
 
-  <div class="footer-tip">点击卡片进入对应功能</div>
+  <div class="footer-tip">点击卡片进入对应功能，开启你的AI科普之旅</div>
 </div>
 </body>
 </html>
