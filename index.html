@@ -12,13 +12,15 @@
   font-family: "Microsoft YaHei", sans-serif;
 }
 
-/* 适配你页面的浅绿背景 */
+/* 让整个页面充满iframe，并让卡片固定居中 */
 body {
-  width: 1220px; /* 和你聊天框宽度一致 */
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(180deg, #f0fcf7 0%, #ffffff 100%);
   display: flex;
-  justify-content: center;
-  padding: 20px;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  overflow: hidden; /* 禁止滚动条，防止页面动 */
 }
 
 .welcome-card {
@@ -28,6 +30,11 @@ body {
   box-shadow: 0 2px 10px rgba(0, 100, 50, 0.06);
   padding: 24px 20px;
   text-align: center;
+  /* 让卡片固定在视口中间 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* 顶部机器人图标 */
